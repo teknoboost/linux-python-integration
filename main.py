@@ -150,9 +150,22 @@ Enter 21 : to exit
 			what_docker(x)
 
 		elif choice == 19:
-			pass
+			print("Enter website name : ",end="")
+			website = input()
+			sys("google-chrome {}".format(website))
+			print()
 		elif choice == 20:
-			pass
+			sender_email = input(str("Enter your email :"))
+			rec_email = input(str("Enter receiver_email :"))
+			message = input("Enter your message : ")
+			password = getpass.getpass("Enter Your Password : ")
+			server = smtplib.SMTP('smtp.gmail.com',587)
+			server.ehlo()
+			server.starttls()
+			server.login(sender_email,password)
+			print("LogIn Successfull")
+			server.sendmail(sender_email,rec_email,message)
+			print("Your Email has been sent to : ",rec_email)
 
 		elif choice == 21:
 			sys("exit")
