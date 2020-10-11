@@ -1,5 +1,5 @@
 # linux and python integration
-Create a TUI using PYTHON and LINUX to quickly perform system operations using Linux menu bar
+Create a Linux Menu Bar(TUI) using PYTHON and LINUX to quickly perform system operations using Linux menu bar
 Enter 1 : to login as root user
 
 Enter 2 : to see date & time
