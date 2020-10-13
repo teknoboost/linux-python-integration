@@ -40,6 +40,7 @@ if x == password:
 			choice = (input("Enter Your Choice : "))
 			
 		choice = int(choice)
+
 		if(choice == 1):
 			sys("sudo su")
 			print()
@@ -136,6 +137,8 @@ if x == password:
 5 : to pull image from docker hub
 6 : to see network list
 7 : to execute container running in background
+8 : to check docker status 
+9 : to start the docker 
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
@@ -157,8 +160,12 @@ if x == password:
 			print("LogIn Successfull")
 			server.sendmail(sender_email,rec_email,message)
 			print("Your Email has been sent to : ",rec_email)
-
+		
 		elif choice == 21:
+			sys("firefox")
+			print()
+			
+		elif choice == 22:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
