@@ -3,6 +3,7 @@ import getpass
 from termcolor import colored
 from python_operations import what_py
 from docker_operations_all import what_docker
+from all_operations import all_operations_display
 import smtplib
 
 #code for banner and designs
@@ -27,6 +28,7 @@ else :
 #menu-bar
 if x == password:
 	while True:
+		all_operations_display()
 		print(colored("""Enter 1  : to login as root user
 Enter 2  : to see date & time 
 Enter 3  : to open calculator
