@@ -3,7 +3,6 @@ import getpass
 from termcolor import colored
 from python_operations import what_py
 from docker_operations_all import what_docker
-from all_operations import all_operations_display
 import smtplib
 
 #code for banner and designs
@@ -164,10 +163,20 @@ if x == password:
 			print("Your Email has been sent to : ",rec_email)
 		
 		elif choice == 21:
+			dir_name = input("Enter name of Directory")
+			sys("mkdir {}".format(dir_name))
+      
+                elif choice == 22:
 			sys("firefox")
 			print()
+		
+		elif choice == 23:
+			sys("free -m")
+		
+		elif choice == 24:
+			sys("df -h")
 			
-		elif choice == 22:
+		elif choice == 25:
 			sys("exit")
 			print(colored("Thanks For Using.","red"))
 			break
