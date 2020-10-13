@@ -153,6 +153,7 @@ Enter 23 : to exit
 7 : to execute container running in background
 8 : to check docker status 
 9 : to start the docker 
+10 : to destroy all containers
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
