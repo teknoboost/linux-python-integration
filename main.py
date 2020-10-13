@@ -2,7 +2,7 @@ from os import system as sys
 import getpass
 from termcolor import colored
 from python_operations import what_py
-from docker_operations import what_docker
+from docker_operations_all import what_docker
 import smtplib
 
 #code for banner and designs
@@ -12,10 +12,12 @@ print()
 
 #read password from file
 f = open("password.txt",'r')
-password = f.readline()
+password = f.read()
+password = password[0:len(password)-1]
 
 #password setup
 x = getpass.getpass("Enter Your Password : ")
+
 if x==password:
 	print(colored("LogIn Successfull !","red"))
 	print()
