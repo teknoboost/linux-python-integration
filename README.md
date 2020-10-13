@@ -42,4 +42,8 @@ Enter 20 : to send an E-mail
 
 Enter 21 : to launch firefox
 
-Enter 22 : to exit
+Enter 22 : to check the ram usage
+
+Enter 23 : to check the storage used
+
+Enter 24 : to exit
