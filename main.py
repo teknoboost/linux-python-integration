@@ -2,7 +2,8 @@ from os import system as sys
 import getpass
 from termcolor import colored
 from python_operations import what_py
-from docker_operations import what_docker
+from docker_operations_all import what_docker
+from all_operations import all_operations_display
 import smtplib
 
 #code for banner and designs
@@ -12,10 +13,12 @@ print()
 
 #read password from file
 f = open("password.txt",'r')
-password = f.readline()
+password = f.read()
+password = password[0:len(password)-1]
 
 #password setup
 x = getpass.getpass("Enter Your Password : ")
+
 if x==password:
 	print(colored("LogIn Successfull !","red"))
 	print()
@@ -25,6 +28,7 @@ else :
 #menu-bar
 if x == password:
 	while True:
+		all_operations_display()
 		print(colored("""Enter 1  : to login as root user
 Enter 2  : to see date & time 
 Enter 3  : to open calculator
@@ -46,7 +50,8 @@ Enter 18 : to Docker Operations
 Enter 19 : to open website
 Enter 20 : to send an email
 Enter 21 : to create a directory
-Enter 22 : to exit
+Enter 22 : to open firefox
+Enter 23 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -146,6 +151,8 @@ Enter 22 : to exit
 5 : to pull image from docker hub
 6 : to see network list
 7 : to execute container running in background
+8 : to check docker status 
+9 : to start the docker 
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
@@ -155,6 +162,7 @@ Enter 22 : to exit
 			website = input()
 			sys("google-chrome {}".format(website))
 			print()
+      
 		elif choice == 20:
 			sender_email = input(str("Enter your email :"))
 			rec_email = input(str("Enter receiver_email :"))
@@ -167,15 +175,19 @@ Enter 22 : to exit
 			print("LogIn Successfull")
 			server.sendmail(sender_email,rec_email,message)
 			print("Your Email has been sent to : ",rec_email)
-
+		
 		elif choice == 21:
 			dir_name = input("Enter name of Directory")
 			sys("mkdir {}".format(dir_name))
-			print(colored("Thanks For Using","red"))
-			break
-		elif choice == 22:
+      
+    elif choice == 22:
+			sys("firefox")
+			print()
+			
+		elif choice == 23:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
+      
 		else :
 			print(colored("Invalid Choice","red"))
