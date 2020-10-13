@@ -49,8 +49,9 @@ Enter 17 : to search location of installed software/tool
 Enter 18 : to Docker Operations
 Enter 19 : to open website
 Enter 20 : to send an email
-Enter 21 : to open firefox
-Enter 22 : to exit
+Enter 21 : to create a directory
+Enter 22 : to open firefox
+Enter 23 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -161,6 +162,7 @@ Enter 22 : to exit
 			website = input()
 			sys("google-chrome {}".format(website))
 			print()
+      
 		elif choice == 20:
 			sender_email = input(str("Enter your email :"))
 			rec_email = input(str("Enter receiver_email :"))
@@ -175,12 +177,17 @@ Enter 22 : to exit
 			print("Your Email has been sent to : ",rec_email)
 		
 		elif choice == 21:
+			dir_name = input("Enter name of Directory")
+			sys("mkdir {}".format(dir_name))
+      
+    elif choice == 22:
 			sys("firefox")
 			print()
 			
-		elif choice == 22:
+		elif choice == 23:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
+      
 		else :
 			print(colored("Invalid Choice","red"))
