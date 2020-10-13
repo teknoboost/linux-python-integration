@@ -35,6 +35,14 @@ def what_docker(x):
 		os_name = input("Enter os_name : ")
 		sys('sudo docker exec -it {} bash'.format(os_name))
 		print()
+	
+	elif x == 8:
+		sys("sudo systemctl status docker")
+		print()
+	
+	elif x == 9:
+		system("sudo systemctl start docker")
+		print()
 
 	else :
 		print("Invalid input !!!")
