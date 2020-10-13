@@ -38,8 +38,10 @@ if x == password:
 		if choice == "all":
 			all_operations_display()
 			choice = (input("Enter Your Choice : "))
-			
-		choice = int(choice)
+		try:	
+			choice = int(choice)
+		except Exception as e:
+			print(colored("\nPlease enter numbers only.","red"))
 
 		if(choice == 1):
 			sys("sudo su")
@@ -167,7 +169,7 @@ if x == password:
 			
 		elif choice == 22:
 			sys("exit")
-			print(colored("Thanks For Using","red"))
+			print(colored("Thanks For Using.","red"))
 			break
 		else :
-			print(colored("Invalid Choice","red"))
+			print(colored("Invalid Choice.Please re-enter.\n","red"))
