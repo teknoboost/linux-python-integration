@@ -47,10 +47,11 @@ Enter 17 : to search location of installed software/tool
 Enter 18 : to Docker Operations
 Enter 19 : to open website
 Enter 20 : to send an email
-Enter 21 : to open firefox
-Enter 22 : to check the ram usage
-Enter 23 : to check the storage used
-Enter 24 : to exit
+Enter 21 : to creqate directory
+Enter 22 : to open firefox
+Enter 23 : to check the ram usage
+Enter 24 : to check the storage used
+Enter 25 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
