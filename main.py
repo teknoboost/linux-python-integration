@@ -3,7 +3,6 @@ import getpass
 from termcolor import colored
 from python_operations import what_py
 from docker_operations_all import what_docker
-from all_operations import all_operations_display
 import smtplib
 
 #code for banner and designs
@@ -28,7 +27,6 @@ else :
 #menu-bar
 if x == password:
 	while True:
-		all_operations_display()
 		print(colored("""Enter 1  : to login as root user
 Enter 2  : to see date & time 
 Enter 3  : to open calculator
@@ -49,9 +47,10 @@ Enter 17 : to search location of installed software/tool
 Enter 18 : to Docker Operations
 Enter 19 : to open website
 Enter 20 : to send an email
-Enter 21 : to create a directory
-Enter 22 : to open firefox
-Enter 23 : to exit
+Enter 21 : to open firefox
+Enter 22 : to check the ram usage
+Enter 23 : to check the storage used
+Enter 24 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -162,7 +161,6 @@ Enter 23 : to exit
 			website = input()
 			sys("google-chrome {}".format(website))
 			print()
-      
 		elif choice == 20:
 			sender_email = input(str("Enter your email :"))
 			rec_email = input(str("Enter receiver_email :"))
@@ -180,14 +178,19 @@ Enter 23 : to exit
 			dir_name = input("Enter name of Directory")
 			sys("mkdir {}".format(dir_name))
       
-                elif choice == 22:
+    elif choice == 22:
 			sys("firefox")
 			print()
-			
+		
+		elif choice == 22:
+			sys("free -m")
+		
 		elif choice == 23:
+			sys("df -h")
+			
+		elif choice == 24:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
-      
 		else :
 			print(colored("Invalid Choice","red"))
