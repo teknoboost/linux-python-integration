@@ -175,6 +175,10 @@ Enter 24 : to exit
 			print("Your Email has been sent to : ",rec_email)
 		
 		elif choice == 21:
+			dir_name = input("Enter name of Directory")
+			sys("mkdir {}".format(dir_name))
+      
+    elif choice == 22:
 			sys("firefox")
 			print()
 		
