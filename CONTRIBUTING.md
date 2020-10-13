@@ -5,11 +5,11 @@ Welcome to The teknoboost/linux-python-integration! Before sending your pull req
 
 ## Contributor
 
-We are very happy that you consider implementing algorithms and data structure for others! This repository is referenced and used by learners from all over the globe. Being one of our contributors, you agree and confirm that:
+We are very happy that you consider implementing algorithms and data structure for others! This repository is referenced and used by learners from all over the globe.Being one of our contributors, you agree and confirm that:
 
 You did your work - no plagiarism allowed
 Any plagiarized work will not be merged.
-Your work will be distributed under teknoboost your pull request is merged
+Your work will be distributed under GNU General Public License V3.O, your pull request is merged
 You submitted work fulfils or mostly fulfils our styles and standards
 
 New implementation is welcome! For example, new solutions for a problem, different representations for a graph data structure or algorithm designs with different complexity.
