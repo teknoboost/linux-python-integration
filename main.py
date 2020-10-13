@@ -26,11 +26,20 @@ else :
 	print(colored("Password is Incorrect !","red"))
 
 #menu-bar
+first_time = True
 if x == password:
 	while True:
-		all_operations_display()
-		choice = int(input("Enter Your Choice : "))
-
+		if first_time:
+			all_operations_display()
+			first_time = False
+		else:
+			print(colored("Enter \'all\' to see complete operations list.\nor\nEnter option directly if you know the operation number\n","blue"))
+		choice = (input("Enter Your Choice : "))
+		if choice == "all":
+			all_operations_display()
+			choice = (input("Enter Your Choice : "))
+			
+		choice = int(choice)
 		if(choice == 1):
 			sys("sudo su")
 			print()
