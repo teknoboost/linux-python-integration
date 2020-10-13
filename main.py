@@ -145,6 +145,8 @@ Enter 21 : to exit
 5 : to pull image from docker hub
 6 : to see network list
 7 : to execute container running in background
+8 : to check docker status 
+9 : to start the docker 
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
