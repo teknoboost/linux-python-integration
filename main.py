@@ -45,7 +45,8 @@ Enter 17 : to search location of installed software/tool
 Enter 18 : to Docker Operations
 Enter 19 : to open website
 Enter 20 : to send an email
-Enter 21 : to exit
+Enter 21 : to create a directory
+Enter 22 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -168,6 +169,11 @@ Enter 21 : to exit
 			print("Your Email has been sent to : ",rec_email)
 
 		elif choice == 21:
+			dir_name = input("Enter name of Directory")
+			sys("mkdir {}".format(dir_name))
+			print(colored("Thanks For Using","red"))
+			break
+		elif choice == 22:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
