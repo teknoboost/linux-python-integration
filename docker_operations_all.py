@@ -43,7 +43,9 @@ def what_docker(x):
 	elif x == 9:
 		system("sudo systemctl start docker")
 		print()
-
+	elif x == 10:
+		system("sudo docker rm -f $(docker ps -a -q)")
+		print()
 	else :
 		print("Invalid input !!!")
 	return
