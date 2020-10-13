@@ -47,7 +47,8 @@ Enter 17 : to search location of installed software/tool
 Enter 18 : to Docker Operations
 Enter 19 : to open website
 Enter 20 : to send an email
-Enter 21 : to exit
+Enter 21 : to open firefox
+Enter 22 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -170,8 +171,12 @@ Enter 21 : to exit
 			print("LogIn Successfull")
 			server.sendmail(sender_email,rec_email,message)
 			print("Your Email has been sent to : ",rec_email)
-
+		
 		elif choice == 21:
+			sys("firefox")
+			print()
+			
+		elif choice == 22:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
