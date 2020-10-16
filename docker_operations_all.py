@@ -48,7 +48,7 @@ def what_docker(x):
 		print()
 	elif x == 11:
 		image_name = input("Enter image_name : ")
-		sys('sudo docker rm -f {}'.format(image_name))
+		sys('sudo docker image rm -f {}'.format(image_name))
 		print()
 	else :
 		print("Invalid input !!!")
