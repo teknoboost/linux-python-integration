@@ -46,6 +46,10 @@ def what_docker(x):
 	elif x == 10:
 		system("sudo docker rm -f $(docker ps -a -q)")
 		print()
+	elif x == 11:
+		image_name = input("Enter image_name : ")
+		sys('sudo docker rm -f {}'.format(image_name))
+		print()
 	else :
 		print("Invalid input !!!")
 	return
