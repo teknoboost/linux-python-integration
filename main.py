@@ -140,6 +140,7 @@ if x == password:
 7 : to execute container running in background
 8 : to check docker status 
 9 : to start the docker 
+10 : to remove image
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
