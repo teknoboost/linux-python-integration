@@ -51,7 +51,8 @@ Enter 19 : to open website
 Enter 20 : to send an email
 Enter 21 : to create a directory
 Enter 22 : to open firefox
-Enter 23 : to exit
+Enter 23 : to disable firewall
+Enter 24 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -182,11 +183,15 @@ Enter 23 : to exit
 			dir_name = input("Enter name of Directory")
 			sys("mkdir {}".format(dir_name))
       
-    elif choice == 22:
+    		elif choice == 22:
 			sys("firefox")
 			print()
-			
+		
 		elif choice == 23:
+			sys("systemctl disable firewalld")
+			print()
+			
+		elif choice == 24:
 			sys("exit")
 			print(colored("Thanks For Using","red"))
 			break
