@@ -154,6 +154,7 @@ Enter 23 : to exit
 8 : to check docker status 
 9 : to start the docker 
 10 : to destroy all containers
+11 : to remove an docker image
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
