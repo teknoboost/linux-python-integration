@@ -29,6 +29,35 @@ else :
 first_time = True
 if x == password:
 	while True:
+
+		all_operations_display()
+		print(colored("""Enter 1  : to login as root user
+Enter 2  : to see date & time 
+Enter 3  : to open calculator
+Enter 4  : to create new user
+Enter 5  : to install new software or tool
+Enter 6  : to open new terminal 
+Enter 7  : to open text-editor
+Enter 8  : to update whole system
+Enter 9  : to Python operations
+Enter 10 : to scan website using nmap
+Enter 11 : to check ip address
+Enter 12 : to ping
+Enter 13 : to configure web server
+Enter 14 : to create banners
+Enter 15 : to run any command
+Enter 16 : to launch browser
+Enter 17 : to search location of installed software/tool
+Enter 18 : to Docker Operations
+Enter 19 : to open website
+Enter 20 : to send an email
+Enter 21 : to create a directory
+Enter 22 : to open firefox
+Enter 23 : to disable firewall
+Enter 24 : to exit
+	""","blue"))
+		choice = int(input("Enter Your Choice : "))
+
 		if first_time:
 			all_operations_display()
 			first_time = False
@@ -42,6 +71,7 @@ if x == password:
 			choice = int(choice)
 		except Exception as e:
 			print(colored("\nPlease enter numbers only.","red"))
+
 
 		if(choice == 1):
 			sys("sudo su")
@@ -141,7 +171,12 @@ if x == password:
 7 : to execute container running in background
 8 : to check docker status 
 9 : to start the docker 
+
+10 : to destroy all containers
+11 : to remove an docker image
+
 10 : to remove image
+
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
@@ -167,6 +202,18 @@ if x == password:
 		elif choice == 21:
 			dir_name = input("Enter name of Directory")
 			sys("mkdir {}".format(dir_name))
+
+      
+    		elif choice == 22:
+			sys("firefox")
+			print()
+		
+		elif choice == 23:
+			sys("systemctl disable firewalld")
+			print()
+			
+		elif choice == 24:
+
 		elif choice == 22:
                 	sys("firefox")
                 	print()
@@ -181,6 +228,7 @@ if x == password:
 			sys("cal")
 			
 		elif choice == 26:
+
 			sys("exit")
 			print(colored("Thanks For Using.","red"))
 			break
