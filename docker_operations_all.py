@@ -43,6 +43,10 @@ def what_docker(x):
 	elif x == 9:
 		system("sudo systemctl start docker")
 		print()
+	elif x == 9:
+		imageName = input("Enter image name")
+		system("sudo systemctl docker image rm -f {}".format(imageName))
+		print()
 
 	else :
 		print("Invalid input !!!")
