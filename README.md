@@ -1,5 +1,7 @@
 # linux and python integration
-Create a Linux Menu Bar(TUI) using PYTHON and LINUX to quickly perform system operations using Linux menu bar
+
+## Project : Create a Linux Menu Bar(TUI) using PYTHON and LINUX to quickly perform system operations using Linux menu bar
+
 Enter 1 : to login as root user
 
 Enter 2 : to see current date & time
@@ -40,6 +42,14 @@ Enter 19 : to open any website
 
 Enter 20 : to send an E-mail
 
-Enter 21 : to launch firefox
+Enter 21 : to create directory
 
-Enter 22 : to exit
+Enter 22 : to launch firefox
+
+Enter 23 : to check the ram usage
+
+Enter 24 : to check the storage used
+
+Enter 25 : to see calendar
+
+Enter 26 : to exit

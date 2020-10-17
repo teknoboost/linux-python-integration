@@ -26,8 +26,10 @@ else :
 	print(colored("Password is Incorrect !","red"))
 
 #menu-bar
+first_time = True
 if x == password:
 	while True:
+
 		all_operations_display()
 		print(colored("""Enter 1  : to login as root user
 Enter 2  : to see date & time 
@@ -55,6 +57,21 @@ Enter 23 : to disable firewall
 Enter 24 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
+
+		if first_time:
+			all_operations_display()
+			first_time = False
+		else:
+			print(colored("Enter \'all\' to see complete operations list.\nor\nEnter option directly if you know the operation number\n","blue"))
+		choice = (input("Enter Your Choice : "))
+		if choice == "all":
+			all_operations_display()
+			choice = (input("Enter Your Choice : "))
+		try:	
+			choice = int(choice)
+		except Exception as e:
+			print(colored("\nPlease enter numbers only.","red"))
+
 
 		if(choice == 1):
 			sys("sudo su")
@@ -154,8 +171,12 @@ Enter 24 : to exit
 7 : to execute container running in background
 8 : to check docker status 
 9 : to start the docker 
+
 10 : to destroy all containers
 11 : to remove an docker image
+
+10 : to remove image
+
 ''')
 			x = int(input("Enter your choice :"))
 			what_docker(x)
@@ -165,7 +186,6 @@ Enter 24 : to exit
 			website = input()
 			sys("google-chrome {}".format(website))
 			print()
-      
 		elif choice == 20:
 			sender_email = input(str("Enter your email :"))
 			rec_email = input(str("Enter receiver_email :"))
@@ -182,6 +202,7 @@ Enter 24 : to exit
 		elif choice == 21:
 			dir_name = input("Enter name of Directory")
 			sys("mkdir {}".format(dir_name))
+
       
     		elif choice == 22:
 			sys("firefox")
@@ -192,9 +213,24 @@ Enter 24 : to exit
 			print()
 			
 		elif choice == 24:
+
+		elif choice == 22:
+                	sys("firefox")
+                	print()
+		
+		elif choice == 23:
+			sys("free -m")
+		
+		elif choice == 24:
+			sys("df -h")
+			
+		elif choice == 25:
+			sys("cal")
+			
+		elif choice == 26:
+
 			sys("exit")
-			print(colored("Thanks For Using","red"))
+			print(colored("Thanks For Using.","red"))
 			break
-      
 		else :
-			print(colored("Invalid Choice","red"))
+			print(colored("Invalid Choice.Please re-enter.\n","red"))
