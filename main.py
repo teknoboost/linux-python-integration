@@ -54,7 +54,10 @@ Enter 20 : to send an email
 Enter 21 : to create a directory
 Enter 22 : to open firefox
 Enter 23 : to disable firewall
-Enter 24 : to exit
+Enter 24 : to see the availabe disk - space
+Enter 25 : to see the Callender
+Enter 26 : to Retrive The data from the clipboard !
+Enter 27 : to exit
 	""","blue"))
 		choice = int(input("Enter Your Choice : "))
 
@@ -226,8 +229,12 @@ Enter 24 : to exit
 			
 		elif choice == 25:
 			sys("cal")
+		
+		elif choice== 26:
+			sys("dnf install xclip")
+			sys("xclip")
 			
-		elif choice == 26:
+		elif choice == 27:
 
 			sys("exit")
 			print(colored("Thanks For Using.","red"))
