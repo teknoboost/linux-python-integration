@@ -52,4 +52,6 @@ Enter 24 : to check the storage used
 
 Enter 25 : to see calendar
 
-Enter 26 : to exit
+Enter 26 : To Retrive The data from the clipboard !
+
+Enter 27 : to exit
